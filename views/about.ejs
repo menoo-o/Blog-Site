@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    height: 85dvh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.item1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: #ffcccb;
+}
+
+.item2 {
+    grid-column: span 1;
+    grid-row: span 3;
+    background-color: #d3d3d3;
+}
+
+.item3 {
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: #add8e6;
+}
+
+.item4 {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: #90ee90;
+}
+
+.item5 {
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: #f4a460;
+}
+
+.about-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-container h1 {
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <%- include('./partials/nav.ejs') %>
+    </header>
+    
+    <main>
+        <div id="about" class="about-container">
+            <h1>About Us</h1>
+            <p>
+                Our company is all about writing. We provide a platform for various types of writings including blog writing, academic writing, technical writing, creative writing, and copywriting. Join us and explore the world of words!
+            </p>
+        </div>
+        
+    </main>
+
+    
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
